@@ -1,12 +1,12 @@
 {% extends 'base.html'%}
 {% block title %}注册{% endblock %}
 {% block content %}
-  <h2>Sign up</h2>
+  <h2>注册</h2>
   <form method="post" novalidate>
     {% csrf_token %}
     {% include 'includes/form.html' %}
     <button type="submit" class="btn btn-success">
-      Create an account
+      创建账户
     </button>
   </form>
 {% endblock %}
