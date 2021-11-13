@@ -1,0 +1,1 @@
+web: gunicorn Soth.wsgi --log-file -
