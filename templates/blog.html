@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}这个博客{% endblock %}
+{% block content %}
+  <h2 class="my-5">{{ blog.topic }}</h2>
+  <p class="my-5">
+  {{ blog.text|linebreaksbr|safe }}
+  </p>
+{% endblock %}

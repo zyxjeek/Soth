@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}阅读{% endblock %}
+{% block content %}
+  <h2>阅读博客</h2>
+  <p><a href="#">创建博客</a></p>
+  {% for blog in blogs %}
+    <div class="card my-3">
+      <div class="card-header">
+        <h4>
+          {{ blog.date_added|date:'Y年Md日 H:i' }}
+          {% if user.username == blog.user.username %}
+          <small><a href="#">编辑博客</a></small>
+          {% endif %}
+        </h4>
+      </div>
+      <div class="card-body" href="#">
+        {{ blog }}<a href="{% url 'blog' blog.id %}" class="ml-3">阅读这个博客</a>
+      </div>
+      <div class="card-footer">
+        <span>作者：{{ blog.user.username }}</span>
+      </div>
+    </div>
+  {% empty %}
+    本服务器上没有公开的博客
+  {% endfor %}
+{% endblock %}
