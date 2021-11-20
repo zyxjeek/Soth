@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}首页{% endblock %}
 {% block content %}
-  <div class="jumbotron my-4"><h1>index page!</h1></div>
+  <div class="jumbotron my-4"><h1>分享你的知识。</h1></div>
+  <h3>
+    <a href="{% url 'signup' %}">注册一个账户</a>以加入本网站。
+  </h3>
+  <h3 class="my-4">你可以阅读别人的博客，也可以撰写博客，让别人阅读。</h3>
+  <a href="#" class="btn btn-success">开始创作吧！</a>
 {% endblock %}
