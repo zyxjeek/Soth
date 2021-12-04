@@ -2,14 +2,14 @@
 {% block title %}阅读{% endblock %}
 {% block content %}
   <h2>阅读博客</h2>
-  <p><a href="#">创建博客</a></p>
+  <p><a href="{% url 'new_blog' %}">创建博客</a></p>
   {% for blog in blogs %}
     <div class="card my-3">
       <div class="card-header">
         <h4>
           {{ blog.date_added|date:'Y年Md日 H:i' }}
           {% if user.username == blog.user.username %}
-          <small><a href="#">编辑博客</a></small>
+          <small><a href="{% url 'edit_blog' blog.id %}">编辑博客</a></small>
           {% endif %}
         </h4>
       </div>
