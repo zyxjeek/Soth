@@ -1,0 +1,6 @@
+1.安装Python
+2.运行 pip install -r requirements.txt
+3.运行 python manage.py runserver
+4.在浏览器里访问localhost:8000即可
+
+备注：上述方法为本地版，在线版需要打开VPN，在浏览器里访问mysoth.herokuapp.com
