@@ -1,3 +1,2 @@
-# 索思网
-## 一个由张亦逊独立开发的博客网站
-## 用于参加2021年编程比赛
+# Soth
+An open source website developed by Zhang Yixun
